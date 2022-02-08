@@ -7,6 +7,10 @@ export const deleteProduct = productId => {
 };
 
 export const createProduct = (title, description, imageUrl, price) => {
+  // return dispatchEvent= {
+  //   fetch( )
+
+  // }
   return {
     type: CREATE_PRODUCT,
     productData: {

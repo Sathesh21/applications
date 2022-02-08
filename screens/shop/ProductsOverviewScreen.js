@@ -5,7 +5,7 @@ import ProductItem from "../../components/shop/ProductItem";
 import * as cartActions from "../../store/actions/cart"
 
 import { HeaderButtons, Item } from "react-navigation-header-buttons";
-import HeaderButton from "../../components/UI/HeaderButton"
+import HeaderButton from "../../components/UI/HeaderButton";
 import Colors from "../../constants/Colors";
 
 const ProductOverviewScreen = (props) => {
@@ -18,7 +18,6 @@ const ProductOverviewScreen = (props) => {
             productTitle:title
         })
     }
-
     return (<FlatList
         data={products}
         keyExtractor={item => item.id}
@@ -29,8 +28,7 @@ const ProductOverviewScreen = (props) => {
                 price={itemData.item.price}
                 onSelect={() => {
                     selectItemHanderler(itemData.item.id, itemData.item.title)
-                }}
-            >
+                }}>
                 <Button
                     color={Colors.primary}
                     title="View Details"
@@ -71,5 +69,4 @@ ProductOverviewScreen.navigationOptions = (navData) => {
         </HeaderButtons>)
     }
 }
-
 export default ProductOverviewScreen;
